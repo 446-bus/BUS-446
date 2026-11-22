@@ -1,0 +1,324 @@
+1
+Factors Associated With Estimated Airbnb Revenue in Asheville, North Carolina
+Sarah Burton, Liam Sutton, and Eva Cronin
+Lenoir-Rhyne University
+BUS.446
+Final Project Report
+November 22, 2026
+2
+Abstract
+This project examines factors associated with estimated annual revenue among Airbnb
+listings in Asheville, North Carolina. The analysis uses a dataset of 2,865 listings and 90
+variables obtained from Inside Airbnb. The project’s business objective is to identify property,
+pricing, geographic, and host-related characteristics associated with stronger revenue
+performance and to translate those patterns into practical considerations for property owners and
+potential investors. The original analysis uses Tableau visualizations and a multiple regression
+model. Descriptive findings indicate that larger entire-home listings generally have higher
+median estimated annual revenue, although the pattern is not uniform across bedroom counts.
+Location also matters: the project reports median annual revenue of $20,544 for ZIP code 28801
+and $19,780 for ZIP code 28806, while ZIP code 28715 has the lowest reported median at
+$11,970. The regression results show positive associations between estimated annual revenue
+and nightly price, guest capacity, review score, and Superhost status. Bedroom count has a
+negative coefficient when the other model variables are held constant. The model explains
+approximately 33.2% of the variation in estimated annual revenue. These findings suggest that
+investment decisions should consider multiple factors rather than rely on property size, location,
+or nightly price alone. Because the outcome is estimated gross revenue rather than net profit, the
+results should be used as planning evidence, not as a guarantee of financial performance.
+Keywords: Airbnb, Asheville, estimated revenue, regression analysis, short-term rentals
+3
+Factors Associated With Estimated Airbnb Revenue in Asheville, North Carolina
+Introduction
+Short-term rental platforms have created opportunities for property owners to make
+residential and investment properties available to travelers. Airbnb listings differ in size,
+location, nightly price, amenities, guest capacity, and host reputation. These differences make it
+difficult for owners and potential investors to determine which property characteristics are most
+closely associated with stronger financial performance. A property with more bedrooms may be
+able to accommodate more guests, but it may also require a larger initial investment and higher
+operating expenses. Likewise, a higher nightly price may increase potential revenue, but it does
+not necessarily mean that a property will attract enough bookings to achieve that revenue.
+This project focuses on the Asheville, North Carolina, Airbnb market. Asheville is the
+geographic market represented in the provided listing dataset, and the analysis compares
+estimated annual revenue across property sizes, ZIP codes, nightly prices, guest ratings, and host
+categories. We are not trying to predict the exact return someone would earn by buying a
+particular property. Instead, we use the listings to identify patterns that can help owners and
+investors make more informed decisions about pricing, operations, and possible purchases.
+Business Problem and Project Objective
+The central business problem is determining which listing characteristics are associated
+with higher estimated Airbnb revenue in Asheville. The project’s stated objective is to identify
+the key factors associated with higher Airbnb revenue and provide data-driven recommendations
+for property owners and potential investors (Burton et al., 2026). This objective is important
+because investment decisions based on a single characteristic can be misleading. For example,
+4
+selecting a property solely because it has many bedrooms may overlook its location, nightly
+price, guest capacity, customer experience, and operating costs.
+The analysis addresses four related questions: (a) How does bedroom count relate to
+estimated annual revenue? (b) How does revenue vary across Asheville ZIP codes? (c) What
+relationship appears between nightly price and estimated annual revenue? (d) Are guest ratings
+and Superhost status associated with revenue after accounting for other variables? Together,
+these questions provide a broader view of the market than any one chart or measure could
+provide.
+5
+Dataset and Analytical Approach
+Dataset Description
+The supplied workbook contains 2,865 Airbnb listing records and 90 variables. The
+project presentation identifies Inside Airbnb as the data source and describes the variables as
+covering property characteristics, nightly pricing, geographic location, host information, and
+customer reviews (Burton et al., 2026). The workbook includes fields such as room type,
+property type, bedrooms, beds, bathrooms, guest capacity, price, availability, estimated
+occupancy, estimated revenue, review scores, host experience, and Superhost status. The
+workbook records a scrape date of September 19, 2026.
+The key outcome variable is estimated annual revenue, represented in the workbook as
+estimated_revenue_l365d. This measure is an estimate of listing revenue over the previous 365
+days. It should not be interpreted as verified cash receipts or profit. The workbook also includes
+estimated occupancy over the same period, nightly price information, and review measures. The
+project presentation reports a dataset size of 2,865 listings; the number of usable observations
+can differ by analysis because some fields contain missing values. For example, the workbook
+has fewer nonmissing observations for estimated revenue and review scores than it has total
+listing records.
+Methods and Visualizations
+The project uses Tableau to explore relationships among listing characteristics and
+estimated revenue. The presentation includes a bedroom-count comparison for entire-home
+listings, a ZIP-code revenue comparison, a geographic distribution map, a scatterplot of nightly
+price and estimated annual revenue, a comparison of review ratings by host experience, a
+6
+Superhost comparison, and a multiple regression table (Burton et al., 2026). Each visualization
+addresses a different part of the business problem.
+The descriptive charts are useful for identifying broad patterns and unusual observations.
+The regression analysis extends the descriptive work by estimating the association between
+several explanatory variables and estimated annual revenue at the same time. The presentation
+reports regression coefficients, p-values, and 95% confidence intervals. The report interprets
+those coefficients as conditional associations: each coefficient describes the estimated
+relationship with revenue when the other variables included in the model are held constant.
+The available materials do not include a separate regression output file, full model
+specification, or detailed documentation of all data-cleaning decisions. Accordingly, the
+regression values in this report are reproduced from the project presentation rather than
+independently re-estimated. This distinction is important when evaluating the precision and
+reproducibility of the findings.
+7
+Findings
+Property Size and Estimated Revenue
+For the bedroom comparison, we looked at entire-home listings. Overall, the median
+estimated annual revenue tends to be higher for homes with more bedrooms. The reported
+median revenue is $10,764 for studio-style listings with zero bedrooms, $17,790 for onebedroom listings, $20,196 for two-bedroom listings, $22,656 for three-bedroom listings, and
+$29,250 for four-bedroom listings. The five-bedroom category has a reported median of $47,709.
+This pattern supports the idea that larger homes may appeal to groups and families seeking more
+space and may therefore have greater revenue potential.
+The pattern is not consistent at every bedroom count. The presentation reports median
+estimated annual revenue of $40,092 for six-bedroom listings, $99,387 for seven-bedroom
+listings, $59,166 for eight-bedroom listings, and $30,879 for nine-bedroom listings. The sevenbedroom category has the highest reported median, but it contains only 20 listings. The eightbedroom group contains fewer listings, and the nine-bedroom group is smaller still. As a result,
+the higher median for seven-bedroom properties should not be interpreted as proof that a sevenbedroom property will reliably outperform every other property size.
+Property size is therefore a useful screening characteristic, but it is not sufficient for an
+investment decision. Larger homes may have higher revenue potential because they can
+accommodate more guests and may support higher nightly prices. However, they can also
+require more capital, maintenance, cleaning, utilities, furnishings, and ongoing management. The
+presentation appropriately cautions that higher revenue does not necessarily mean higher
+profitability (Burton et al., 2026).
+8
+Location and Estimated Revenue
+The ZIP-code chart shows that estimated annual revenue is not the same across all areas.
+The presentation reports that ZIP code 28801 has the highest median at approximately $20,544,
+followed by ZIP code 28806 at $19,780. ZIP codes 28804 and 28732 are also described as
+relatively strong. ZIP code 28715 has the lowest reported median annual revenue at
+approximately $11,970 (Burton et al., 2026).
+These results suggest that location should be evaluated at a more detailed level than
+simply deciding to invest somewhere in Asheville. Different areas may attract different types of
+visitors, provide different access to attractions, or face different levels of competition. The
+geographic distribution map also shows listing clusters throughout Asheville. Higher-revenue
+listings appear in multiple areas rather than being concentrated in one single location. This
+means that a ZIP-code median can help identify areas for further research, but it cannot replace
+property-level due diligence.
+9
+Nightly Price and Estimated Annual Revenue
+In the scatterplot from our presentation, listings with higher nightly prices generally also
+show higher estimated annual revenue. Listings with higher nightly prices tend to have the
+potential to generate more annual revenue. At the same time, most listings are clustered at lower
+nightly prices, and the vertical spread of the points indicates substantial variation in revenue
+among properties with similar prices. The chart also contains a small number of extreme
+observations with unusually high nightly prices or estimated annual revenue (Burton et al.,
+2026).
+The visual pattern supports the idea that nightly price contributes to revenue, but it does
+not establish that raising a price will automatically increase revenue. If a price is set too high
+relative to comparable listings, booking demand may decline. Annual revenue reflects both the
+amount charged and the number of nights booked. Owners should therefore consider local
+competitors, seasonality, property capacity, availability, and guest demand when setting prices.
+Customer Satisfaction and Host Experience
+Our customer satisfaction chart shows average guest ratings staying close to 4.9 out of 5,
+regardless of how long the host has been on Airbnb. The chart does not show a clear upward or
+downward pattern as the number of years hosting increases. The project describes this as a
+ceiling effect: because ratings are already clustered near the top of the scale, there is limited
+room for visible variation (Burton et al., 2026).
+This finding suggests that host tenure alone may not explain meaningful differences in
+guest satisfaction in this dataset. Newer hosts can receive ratings similar to those of more
+experienced hosts. However, the narrow range of ratings also limits the ability of this chart to
+distinguish among listings. A high average rating is still important as an indicator of positive
+10
+guest experience, but the chart does not establish that every listing delivers the same level of
+service or that host experience is irrelevant to operating performance.
+Superhost Performance
+We also compared Superhosts with other hosts to see how host status relates to review
+ratings and estimated annual revenue. The visual suggests a difference between the two groups
+and motivates the question of whether Superhost status provides a marginal revenue benefit. The
+regression analysis provides a more specific estimate: after accounting for the other included
+variables, Superhost listings are associated with approximately $16,372 more estimated annual
+revenue. This is an association, not proof that obtaining Superhost status by itself causes revenue
+to increase.
+11
+Regression Analysis
+The multiple regression model evaluates the relationship between estimated annual
+revenue and five explanatory variables: nightly price, bedrooms, guest capacity (accommodates),
+review score, and Superhost status. The presentation reports that the model explains
+approximately 33.2% of the variation in estimated annual revenue. This indicates that the
+selected variables provide meaningful information about revenue differences, while also showing
+that most of the variation is not explained by this model.
+Table 1
+Reported Multiple Regression Results
+Variable Coefficient ($) p value 95% CI lower 95% CI upper
+Intercept -89,259.30 3.25 × 10 ⁶⁻ -126,846.91 -51,671.69
+Nightly price 48.53 6.29 × 10 ⁸⁻ 30.95 66.11
+Bedrooms -4,435.74 0.0133 -7,949.02 -922.46
+Accommodates 3,796.28 2.90 × 10 ⁶⁻ 2,205.73 5,386.84
+Review score 17,015.87 1.28 × 10 ⁵⁻ 9,372.32 24,659.42
+Superhost 16,371.69 6.81 × 10 ⁴² ⁻ 14,005.52 18,737.85
+Note. Values are reproduced from the project presentation. The dependent variable is estimated annual revenue. CI =
+confidence interval.
+Interpretation of the Coefficients
+Nightly price has a positive coefficient of 48.53. In the model, a one-dollar increase in
+nightly price is associated with approximately $48.53 more estimated annual revenue, holding
+the other included variables constant. The p-value is very small and the reported 95% confidence
+interval is positive, from $30.95 to $66.11. This is consistent with the positive relationship
+shown in the scatterplot, although the coefficient should not be treated as a guaranteed return
+from increasing a listing’s price.
+Guest capacity has a positive coefficient of $3,796.28. Each additional guest the property
+accommodates is associated with approximately $3,796 more estimated annual revenue, holding
+the other model variables constant. The confidence interval ranges from $2,205.73 to $5,386.84,
+12
+and the reported p-value is 2.90 × 10 ⁶. This finding reinforces the business importance of a ⁻
+property’s ability to serve larger groups, while still leaving room for differences in demand and
+operating costs.
+13
+Regression Analysis (Continued)
+Review score has a positive coefficient of $17,015.87. A one-point increase in the review
+score is associated with approximately $17,016 more estimated annual revenue when the other
+variables are held constant. Its reported 95% confidence interval ranges from $9,372.32 to
+$24,659.42. This result supports the importance of customer experience in the project’s revenue
+analysis. However, review scores are bounded and concentrated near the top of the scale, so a
+one-point change is substantial and should not be interpreted as a small, routine improvement.
+Superhost status has a positive coefficient of $16,371.69, with a reported 95% confidence
+interval from $14,005.52 to $18,737.85. This suggests that Superhost listings have higher
+estimated annual revenue than comparable non-Superhost listings within the model’s adjustment
+framework. Superhost status may reflect several underlying qualities, such as reliable hosting,
+guest communication, and consistent service. The regression cannot isolate which of those
+characteristics explains the association, and the result does not prove that the designation itself
+causes the higher revenue.
+Bedrooms has a negative coefficient of -$4,435.74. Holding nightly price, guest capacity,
+review score, and Superhost status constant, each additional bedroom is associated with
+approximately $4,436 less estimated annual revenue. This may appear to conflict with the
+descriptive bedroom chart, which generally shows higher median revenue among larger entirehome listings. However, the two analyses answer different questions. The descriptive chart
+compares median revenue across bedroom groups. The regression estimates the relationship with
+bedrooms after statistically controlling for guest capacity and the other variables. Because
+bedroom count and guest capacity overlap conceptually, the coefficient for bedrooms represents
+14
+the additional association of bedrooms among properties with the same modeled capacity and
+other characteristics.
+The negative bedroom coefficient should therefore not be interpreted as evidence that
+adding bedrooms will automatically reduce revenue. It may reflect overlap among predictors,
+differences in property mix, or other factors not represented in the model. The result is a reason
+to avoid using bedroom count as a stand-alone investment rule.
+Overall Model Fit
+An R-squared of about .332 means that the model explains roughly 33.2% of the
+differences in estimated annual revenue across the listings included in the analysis. The
+remaining 66.8% is associated with factors not captured by the model, random variation,
+measurement limitations, or other influences. Potentially relevant factors include seasonal
+demand, exact location, amenities, cleaning and management costs, property condition, booking
+restrictions, minimum-night requirements, competition, and the timing of guest reservations. The
+model is useful for identifying associations, but it is not a complete forecasting system.
+15
+Business Recommendations
+Evaluate the Whole Property, Not Just Bedroom Count
+Property owners and investors should consider larger properties, particularly those with
+five to eight bedrooms, as potential opportunities for group-oriented demand. The reported
+median revenue figures show that several of these categories have strong revenue potential.
+Nevertheless, investors should compare the purchase price, renovation needs, furnishing costs,
+taxes, insurance, utilities, cleaning, maintenance, and management expenses before deciding that
+a larger property is financially attractive. Revenue is only one part of the investment equation.
+Use Location as a Screening Tool
+The reported ZIP-code results identify 28801 and 28806 as areas with the highest median
+estimated annual revenue in the presentation. These areas may be useful starting points for
+additional market research. Investors should still examine neighborhood-level competition,
+nearby attractions, transportation, zoning and permitting requirements, and the characteristics of
+comparable listings. The geographic map indicates that higher-revenue listings appear across
+multiple clusters, so an investor should not assume that one ZIP code guarantees success.
+Set Prices Competitively
+The positive nightly-price coefficient suggests that pricing is an important revenue factor.
+Owners should compare similar properties based on location, capacity, amenities, property type,
+and guest appeal. Pricing should also respond to seasonal patterns and local demand. A strategy
+that focuses only on charging the highest possible nightly rate may reduce bookings and
+undermine annual revenue. Monitoring occupancy and revenue together is more informative than
+monitoring nightly price alone.
+16
+Protect Guest Experience and Host Reputation
+The positive associations for review score and Superhost status indicate that guest
+experience and host reputation deserve ongoing attention. Owners should prioritize cleanliness,
+accurate listing descriptions, clear check-in instructions, responsive communication, and prompt
+resolution of guest concerns. The customer satisfaction chart shows that ratings remain high
+across host experience levels, suggesting that newer hosts can also establish a strong reputation.
+Consistent operating practices may help owners maintain positive reviews over time.
+Make Decisions Using Multiple Measures
+The final recommendation is to balance estimated revenue potential with occupancy,
+property characteristics, location, competitive pricing, customer satisfaction, and operating costs.
+Before purchasing or expanding a short-term rental, an investor should estimate net operating
+income under conservative, expected, and optimistic booking scenarios. This additional financial
+analysis is necessary because the project’s revenue measure does not subtract expenses or
+establish profitability.
+17
+Limitations and Opportunities for Further Analysis
+Several limitations should be considered when interpreting the findings. First, estimated
+annual revenue is an estimate rather than audited financial information. The dataset does not
+establish the actual expenses incurred by each host, so the analysis cannot determine net income,
+cash flow, return on investment, or payback period. Second, the dataset is a snapshot of listings
+collected on September 19, 2026. Availability, prices, listing status, and market conditions can
+change over time. The results should not be assumed to represent every future season or market
+condition.
+Third, some variables contain missing values, and the number of observations used in
+each chart or model may differ. The project presentation does not provide a complete account of
+the sample size for every analysis or all data-cleaning procedures. Fourth, the regression model
+explains approximately one-third of the variation in estimated annual revenue. Important
+variables may be omitted, and relationships among predictors—particularly bedrooms and guest
+capacity—may affect coefficient estimates. Finally, statistical association does not establish
+causation. The results do not prove that changing one characteristic will produce the
+corresponding change in revenue.
+Future analysis could strengthen the project by documenting the number of observations
+used in each model, testing for influential outliers, reviewing missing-data treatment, and
+examining whether relationships differ by room type or property type. A future model could also
+incorporate location controls, amenities, availability, occupancy, minimum-night rules, and
+seasonal indicators. Most importantly, adding property acquisition costs and operating expenses
+would allow the analysis to move from estimated gross revenue toward profitability and
+investment return.
+18
+Conclusion
+This project examined 2,865 Airbnb listings in Asheville, North Carolina, to identify
+factors associated with estimated annual revenue. The descriptive analysis indicates that larger
+entire-home listings generally have higher median revenue, although the pattern is not uniform
+across bedroom counts. The ZIP-code comparison shows meaningful geographic differences,
+with the presentation reporting the highest median revenue in ZIP code 28801 and the lowest in
+ZIP code 28715. The nightly-price scatterplot suggests a positive relationship between price and
+estimated revenue, while guest ratings remain close to 4.9 out of 5 across host experience levels.
+The regression results add detail to these patterns. Nightly price, guest capacity, review
+score, and Superhost status have positive associations with estimated annual revenue, while
+bedroom count has a negative association after controlling for the other included variables. The
+model explains approximately 33.2% of revenue variation, showing that multiple characteristics
+matter and that additional influences remain unmeasured.
+The central business takeaway is that successful Airbnb investment decisions require a
+balanced evaluation. Property size, location, pricing, guest capacity, and customer satisfaction
+can all inform a decision, but none should be used alone. Owners and investors should combine
+market comparisons with a realistic assessment of expenses, occupancy, and regulatory
+requirements. Used with these cautions, the analysis provides a practical starting point for
+understanding revenue patterns in the Asheville short-term rental market.
+19
+References
+Burton, S., Sutton, L., & Cronin, E. (2026). Asheville, NC, Airbnb listings [Unpublished
+BUS.446 project presentation]. Lenoir-Rhyne University.
+Inside Airbnb. (2026). Get the data: Asheville, North Carolina listings [Data set].
+https://insideairbnb.com/get-the-data/
+Burton, S., Sutton, L., & Cronin, E. (2026). listings - asheville [Excel data file]. BUS.446 course
+project materials, Lenoir-Rhyne University.
